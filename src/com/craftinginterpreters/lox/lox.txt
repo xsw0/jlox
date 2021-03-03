@@ -1,3 +1,75 @@
+class Doughnut {
+  cook() {
+    print "Fry until golden brown.";
+  }
+}
+
+class BostonCream < Doughnut {}
+
+BostonCream().cook();
+
+class Foo {
+  init() {
+    return;
+  }
+}
+
+class Person {
+  sayName() {
+    print this.name;
+  }
+
+  sayGender()
+  {
+    print this.gender;
+  }
+}
+
+var jane = Person();
+jane.name = "Jane";
+jane.gender = "male";
+
+var bill = Person();
+bill.name = "Bill";
+bill.gender = "female";
+
+bill.sayName = jane.sayGender;
+bill.sayName();
+
+var say = jane.sayName;
+say();
+
+class Cake {
+  taste() {
+    var adjective = "delicious";
+    print "The " + this.flavor + " cake is " + adjective + "!";
+  }
+}
+
+var cake = Cake();
+cake.flavor = "German chocolate";
+cake.taste(); // Prints "The German chocolate cake is delicious!".
+
+class Bacon {
+  eat() {
+    print "Crunch crunch crunch!";
+  }
+}
+
+Bacon().eat(); // Prints "Crunch crunch crunch!".
+
+class Bagel {}
+var bagel = Bagel();
+print bagel; // Prints "Bagel instance".
+
+class DevonshireCream {
+  serveOn() {
+    return "Scones";
+  }
+}
+
+print DevonshireCream; // Prints "DevonshireCream".
+
 fun makeCounter() {
   var i = 0;
   fun count() {
